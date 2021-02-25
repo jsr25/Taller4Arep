@@ -15,6 +15,7 @@ public class PicoSpringBoot implements Process {
     private static PicoSpringBoot _instace = new PicoSpringBoot();
     private Map<String, Method> requesProcessors = new HashMap<>();
     private HttpServer hserver;
+    private static int port;
 
     private PicoSpringBoot(){
 
@@ -59,14 +60,22 @@ public class PicoSpringBoot implements Process {
     public void startServer() throws IOException {
         hserver = new HttpServer();
         hserver.regiserProcess("/springapp",this);
-        hserver.startServer(8080);
+        hserver.startServer(port);
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         String[] l1=new String[1];
         l1[0]="edu.escuelaing.arep.picospring.demo.DemoApi";
+        port=getPort();
 
         PicoSpringBoot.getInstance().loadCompoents(l1);
         PicoSpringBoot.getInstance().startServer();
+    }
+
+    private static int getPort() {
+        if(System.getenv("PORT")!= null){
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 8080;
     }
 }

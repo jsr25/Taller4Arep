@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -cp "target/classes" edu.escuelaing.arep.picospring.PicoSpringBoot edu.escuelaing.arep.picospring.demo.DemoApi
