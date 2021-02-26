@@ -59,15 +59,6 @@ public class HttpServer {
 
 
             while ((inputLine = in.readLine()) != null) {
-//                if(!pathRead ){
-//                    path2 = inputLine.split(" ")[1];
-//                    if(path2.contains("%")){
-//                        Controller conn=new Controller();
-//                        conn.insertData(path2.split("%")[1]);
-//                    }
-//                    System.out.println("Path read**"+ path2);
-//                    pathRead = true;
-//                }
                 System.out.println("Recibí: " + inputLine);
                 if(isfirstLine){
                     path=inputLine.split(" ")[1];

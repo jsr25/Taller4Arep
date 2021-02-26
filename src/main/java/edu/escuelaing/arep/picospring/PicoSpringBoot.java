@@ -11,6 +11,11 @@ import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase princial de la implemntacion de picoSpring
+ *
+ * Autor Juan Ramos
+ */
 public class PicoSpringBoot implements Process {
     private static PicoSpringBoot _instace = new PicoSpringBoot();
     private Map<String, Method> requesProcessors = new HashMap<>();
