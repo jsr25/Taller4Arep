@@ -16,7 +16,8 @@ instaladas:
 * Java 11 o superior
 * Heroku
 
-
+### Arquitectura
+![](./img/ArquitecturaLab4.PNG)
 
 ### Instalacion
 1. Se debe clonar el repositorio con el siguiente comando
